@@ -8,7 +8,7 @@ This Directory contains two applications:
 live app for this project : http://siddharthareddymachi.pythonanywhere.com/
 
 # AdsList application description
-=> Allows the uers to login with their credential and create new ads or edit their own adds or comment on someone's ads.
+=> Allows the users to login with their credential and create new ads or edit their own adds or comment on someone's ads.
   => Operations on ads is done through filling the respective form provided.
 => Unautenticated users can only view the ads but cannot perform any tasks.
 
