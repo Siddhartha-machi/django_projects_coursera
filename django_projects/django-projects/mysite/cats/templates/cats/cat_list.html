@@ -1,0 +1,35 @@
+{% extends "registration/base_bootstrap.html" %}
+
+{% block content %}
+  <h1>Cat List</h1>
+  {% if cat_list %}
+  <ul>
+    {% for cat in cat_list %}
+      <li>
+          {{ cat.nickname }}
+
+         (<a href="{% url 'cats:cat_update' cat.id %}">Update</a> |
+          <a href="{% url 'cats:cat_delete' cat.id %}">Delete</a>)
+      </li>
+        <ol>
+            <li>Weight :{{ cat.weight }}</li>
+            <li>Breed :{{ cat.breed }}</li>
+            <li>Foods :{{ cat.food }}</li>
+        </ol>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no cats in the library.</p>
+  {% endif %}
+
+  <div class='alert alert-primary' role='alert'>
+    <ul>
+        <li><a href="{% url 'cats:cat_create' %}">Add a cat</a></li>
+        <li><a href="{% url 'cats:all' %}">Back to Cats</a></li>
+        <li><a href="{% url 'cats:breed_create' %}">Add a breed</a></li>
+        <li><a href="{% url 'cats:breed_list' %}">View breeds</a></li>
+    </ul>
+
+  </div>
+
+{% endblock %}
